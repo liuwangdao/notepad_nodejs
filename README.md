@@ -8,3 +8,5 @@ visit /home/index.html;
 write down anything and it will be appended to msg.txt;
 # how it works
 app.js-->html.js-->index.html-->get.js-->msg.txt
+# config
+port: ./bin/www
