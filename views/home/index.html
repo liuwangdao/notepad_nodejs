@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="/lib/layui/layui.js"></script>
+    <div class="jumbotron">
+        <h1>Notepad</h1>
+        <p class="lead">Input Sth.</p>
+        <textarea id="TextArea1" cols="50" rows="4"></textarea>
+        <p class="lead"> </p>
+        <Button ID="Button1" OnClick="Button1_OnClick()">Summit</Button>
+        <p class="lead"> </p>
+        <p class="lead"> </p>
+
+    </div>
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function Button1_OnClick() {
+            // $.get("localhost:3000/buttonClicked", {
+            // $.get("127.0.0.1:3000/buttonClicked", {
+            $.get("/buttonClicked", {
+                    "value": "send to server"
+                },
+                function(data) {
+                    console.log(data)
+                })
+        }
+    </script>
+</body>
+
+</html>
